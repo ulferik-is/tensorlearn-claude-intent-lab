@@ -44,13 +44,14 @@ The following are excluded from this intent:
 - **C-3** Access only through the existing authenticated portal. No attached results and no public result link (PRD).
 - **C-4** No duplicate notifications for the same released result version; delivery failures are handled without duplicate patient messages (PRD).
 - **C-5** No recipient other than the patient is approved. The referring doctor must not be treated as approved because the old request asked for it (clinical owner: "do not infer approval for referring-doctor notifications from the old request").
+- **C-6** All communication must be fully WCAG 2.2 compliant if the communication channel allows it.
 
 ## Open questions
 
 - **OPEN-1 Channel** (SMS, email or portal push). Owners: **product owner** and **privacy owner**, decided after the consent and delivery review. Still under review per the privacy owner. Not decided by this intent.
 - **OPEN-2 Referring-doctor notification**: whether the referring doctor may be notified and under what recipient authorization. Owners: **clinical owner** and **privacy owner**. Not approved by the PRD and not approved by this intent.
 
-```json
+```json:
 {
   "notifyWhen": ["doctor-reviewed", "released"],
   "messageMayInclude": ["update-available"],
