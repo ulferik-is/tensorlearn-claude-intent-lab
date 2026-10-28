@@ -51,7 +51,7 @@ The following are excluded from this intent:
 - **OPEN-1 Channel** (SMS, email or portal push). Owners: **product owner** and **privacy owner**, decided after the consent and delivery review. Still under review per the privacy owner. Not decided by this intent.
 - **OPEN-2 Referring-doctor notification**: whether the referring doctor may be notified and under what recipient authorization. Owners: **clinical owner** and **privacy owner**. Not approved by the PRD and not approved by this intent.
 
-```json:
+```json
 {
   "notifyWhen": ["doctor-reviewed", "released"],
   "messageMayInclude": ["update-available"],
